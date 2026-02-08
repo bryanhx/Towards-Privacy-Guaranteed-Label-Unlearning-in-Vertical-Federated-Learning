@@ -10,7 +10,7 @@ import torch.nn.functional as F
 def MIA(retain_loader, forget_loader, test_loader, bottom_model_A, bottom_model_B, top_model,args):
     X_f, Y_f, X_r, Y_r = get_membership_attack_data(retain_loader, forget_loader, test_loader, bottom_model_A, bottom_model_B, top_model,args)
     #clf = SVC(C=3,gamma='auto',kernel='rbf')
-    clf = LogisticRegression(class_weight='balanced',solver='lbfgs',multi_class='multinomial')
+    clf = LogisticRegression(class_weight='balanced',solver='lbfgs')
     clf.fit(X_r, Y_r)
     results = clf.predict(X_f)
     return results.mean()
@@ -49,6 +49,9 @@ def collect_prob(data_loader, bottom_model_A, bottom_model_B, top_model,args):
                 x_a = data[:, :, :, 0:16]
                 x_b = data[:, :, :, 16:32]
             elif args.data == 'mri':
+                x_a = data[:, :, :, 0:112]
+                x_b = data[:, :, :, 112:224]
+            elif args.data == 'ct':
                 x_a = data[:, :, :, 0:112]
                 x_b = data[:, :, :, 112:224]
             elif args.data == 'yahoo':

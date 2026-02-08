@@ -61,6 +61,26 @@ class VFL(object):
                             transforms.ToTensor(),
                             normalize,
                         ]))
+            
+        elif self.args.data.lower()=="ct":
+            traindir = os.path.join('./data/Chest CT_v2', 'train')
+            testdir = os.path.join('./data/Chest CT_v2', 'test')
+            normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                            std=[0.229, 0.224, 0.225])
+            train_set = datasets.ImageFolder(
+                        traindir,
+                        transforms.Compose([
+                            transforms.RandomResizedCrop(224),
+                            transforms.RandomHorizontalFlip(),
+                            transforms.ToTensor(),
+                            normalize,
+                        ]))
+            test_set = datasets.ImageFolder(testdir, transforms.Compose([
+                            transforms.Resize(256),
+                            transforms.CenterCrop(224),
+                            transforms.ToTensor(),
+                            normalize,
+                        ]))
 
         else:
             dataset = get_dataset(self.args)
@@ -170,6 +190,9 @@ class VFL(object):
             elif self.args.data == 'mri':
                 x_a = batch_x[:, :, :, 0:112]
                 x_b = batch_x[:, :, :, 112:224]
+            elif self.args.data == 'ct':
+                x_a = batch_x[:, :, :, 0:112]
+                x_b = batch_x[:, :, :, 112:224]
             else:
                 raise ValueError(f'No dataset named {self.args.data}!')
             
@@ -232,6 +255,9 @@ class VFL(object):
                     x_b = batch_x[1]
                     x_a = batch_x[0]
                 elif self.args.data == 'mri':
+                    x_a = batch_x[:, :, :, 0:112]
+                    x_b = batch_x[:, :, :, 112:224]
+                elif self.args.data == 'ct':
                     x_a = batch_x[:, :, :, 0:112]
                     x_b = batch_x[:, :, :, 112:224]
                 else:

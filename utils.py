@@ -187,6 +187,9 @@ def evaluate(bottom_model_A, bottom_model_B, top_model, data_loader, args):
             elif args.data == 'mri':
                 x_a = batch_x[:, :, :, 0:112]
                 x_b = batch_x[:, :, :, 112:224]
+            elif args.data == 'ct':
+                x_a = batch_x[:, :, :, 0:112]
+                x_b = batch_x[:, :, :, 112:224]
             elif args.data == 'yahoo':
                 for i in range(len(batch_x)):
                     batch_x[i] = batch_x[i].long().cuda()

@@ -21,7 +21,7 @@ def config():
     ##################################### Dataset #################################################
     parser.add_argument('--data', default='cifar10', type=str,
                         help='name of dataset',
-                        choices=['cifar10', 'mnist', 'cifar100', 'modelnet', 'yahoo', 'mri'])
+                        choices=['cifar10', 'mnist', 'cifar100', 'modelnet', 'yahoo', 'mri', 'ct'])
     parser.add_argument('--data_path', default='data', type=str,
                         help='path of dataset')
     parser.add_argument('--batch_size', default=32, type=int,

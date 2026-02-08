@@ -43,40 +43,40 @@ def main():
     
     if args.model_type == 'resnet18':
         if args.data=='cifar10':
-            full_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_bottom_model_A.pt")
-            full_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_bottom_model_B.pt")
-            full_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_top_model.pt")
-            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_bottom_model_A.pt")
-            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_bottom_model_B.pt")
-            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_top_model.pt")
+            full_bottom_model_A = torch.load("/scratch/taehongxi/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_bottom_model_A.pt", weights_only=False)
+            full_bottom_model_B = torch.load("/scratch/taehongxi/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_bottom_model_B.pt", weights_only=False)
+            full_top_model = torch.load("/scratch/taehongxi/exp/emb_exp_resnet18_on_cifar10_lr0.001/full_train/full_top_model.pt", weights_only=False)
+            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_bottom_model_A.pt", weights_only=False)
+            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_bottom_model_B.pt", weights_only=False)
+            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar10_lr0.001/retrain3/retrain_top_model.pt", weights_only=False)
             
         elif args.data == 'cifar100':
-            full_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_bottom_model_A.pt")
-            full_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_bottom_model_B.pt")
-            full_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_top_model.pt")
-            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_bottom_model_A.pt")
-            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_bottom_model_B.pt")
-            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_top_model.pt")
+            full_bottom_model_A = torch.load("/scratch/taehongxi/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_bottom_model_A.pt", weights_only=False)
+            full_bottom_model_B = torch.load("/scratch/taehongxi/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_bottom_model_B.pt", weights_only=False)
+            full_top_model = torch.load("/scratch/taehongxi/exp/EE_resnet18_on_cifar100_lr0.001/full_train/full_top_model.pt", weights_only=False)
+            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_bottom_model_A.pt", weights_only=False)
+            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_bottom_model_B.pt", weights_only=False)
+            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_resnet18_on_cifar100_lr0.001/retrain3/retrain_top_model.pt", weights_only=False)
         else:
             raise ValueError(f'No dataset named {args.data}!')
         
 
     else:
         if args.data=='cifar10':
-            full_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_bottom_model_A.pt")
-            full_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_bottom_model_B.pt")
-            full_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_top_model.pt")
-            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_bottom_model_A.pt")
-            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_bottom_model_B.pt")
-            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_top_model.pt")
+            full_bottom_model_A = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_bottom_model_A.pt", weights_only=False)
+            full_bottom_model_B = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_bottom_model_B.pt", weights_only=False)
+            full_top_model = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar10_lr0.001/full_train/full_top_model.pt", weights_only=False)
+            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_bottom_model_A.pt", weights_only=False)
+            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_bottom_model_B.pt", weights_only=False)
+            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar10_lr0.001/retrain3/retrain_top_model.pt", weights_only=False)
             
         elif args.data == 'cifar100':
-            full_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_bottom_model_A.pt")
-            full_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_bottom_model_B.pt")
-            full_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_top_model.pt")
-            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_bottom_model_A.pt")
-            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_bottom_model_B.pt")
-            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_top_model.pt")
+            full_bottom_model_A = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_bottom_model_A.pt", weights_only=False)
+            full_bottom_model_B = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_bottom_model_B.pt", weights_only=False)
+            full_top_model = torch.load("/scratch/taehongxi/exp/EE_vgg16_on_cifar100_lr0.001/full_train2/full_top_model.pt", weights_only=False)
+            retrain_bottom_model_A = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_bottom_model_A.pt", weights_only=False)
+            retrain_bottom_model_B = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_bottom_model_B.pt", weights_only=False)
+            retrain_top_model = torch.load("C:/Users/Bryan/Documents/Vertical Federated Unlearning/exp/EE_vgg16_on_cifar100_lr0.001/retrain3/retrain_top_model.pt", weights_only=False)
         else:
             raise ValueError(f'No model named {args.model_type}!')
     
@@ -125,6 +125,29 @@ def main():
     test_retain_loader = DataLoader(retain_test_set, batch_size = args.batch_size, shuffle=True, num_workers=args.num_workers)
 
 
+    if args.data == "cifar100":
+        class_num = 100
+    else:
+        class_num = 10
+        
+    idx_subset_descent = [0] * class_num
+    #print("idx subset : ", idx_subset)
+    idx_limit = [3] * class_num
+    idx_plus = []
+
+    for i in range(len(trainset)):
+        if trainset.targets[i] in class_to_forget:
+            pass
+        else:
+            if idx_subset_descent[trainset.targets[i]] == idx_limit[trainset.targets[i]]:
+                pass
+            else:
+                idx_plus.append(i)
+                idx_subset_descent[trainset.targets[i]] = idx_subset_descent[trainset.targets[i]] + 1
+
+    print("idx subset descent : ", idx_subset_descent)
+
+
     idx_few = []
     idx_subset0 = 0
     idx_subset1 = 0
@@ -146,7 +169,9 @@ def main():
                     idx_subset1 = idx_subset1 + 1
     
     #print("Samples used in LUV unlearn : ", idx_few)
+    fewshot_train_descent = Subset(trainset, idx_plus)
     fewshot_train = Subset(trainset, idx_few)
+    fewshot_descent_loader = DataLoader(fewshot_train_descent, batch_size = 129, shuffle=True, num_workers=args.num_workers) #batch size=129 for cifar100
     LUV_trainloader = DataLoader(fewshot_train, batch_size = args.batch_size, shuffle=True, num_workers=args.num_workers)
 
     print("Finish Data Preprocessing")
@@ -207,7 +232,7 @@ def main():
 
     #Start unlearning
     start_time = time.time()
-    unlearn_method(LUV_trainloader, full_bottom_model_A, full_bottom_model_B, full_top_model, class_to_forget, criterion, args)
+    unlearn_method(LUV_trainloader, fewshot_descent_loader, full_bottom_model_A, full_bottom_model_B, full_top_model, class_to_forget, criterion, args)
     logger.info(f"Time for {args.unlearn_method} unlearning")
     end_time = time.time()
     duration = end_time - start_time
