@@ -91,16 +91,7 @@ Train a retrain model:
 python main.py --data=yahoo --model_type=mixtext --epochs=20 --mode=retrain --unlearn_class=6
 ```
 
-#### ModelNet Resnet18:
-Train Full Model:
-```
-python main_modelnet.py --data=modelnet --num_classes=40
-```
 
-Train a retrain model in 1 label unlearning scenario:
-```
-python main_modelnet.py --data=modelnet --num_classes=40 --mode=retrain
-```
 
 #### Brain MRI Resnet18:
 Train Full Model:
@@ -160,3 +151,4 @@ python main.py --data=cifar100 --num_classes=100 --mode=retrain --unlearn_class_
 ### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
 ### Command for unlearning
 Before running the unlearning Python files, ensure you update the model path in the `torch.load()` code to point to your saved directory in the following files: `unlearn.py`, `unlearn_modelnet.py`, `unlearn_2labels.py`, and `unlearn_4labels.py`.
+
