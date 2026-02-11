@@ -9,6 +9,7 @@
 #### (Released on February 08, 2026)
 
 ## Introduction
+We tackle label unlearning in Vertical Federated Learning (VFL), where labels are both necessary inputs and sensitive information. We introduce a representation-level manifold mixup to synthesize embeddings for unlearned and retained samples, providing stronger signals for efficient gradient-based forgetting and recovery. Our method removes label information while preserving utility via a lightweight recovery optimization, and scales across diverse datasets (e.g., MNIST, CIFAR-10/100, ModelNet, medical imaging, and Yahoo Answers).
 
 ## Getting Start
 
@@ -60,6 +61,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 The project is open source under BSD-3 license (see the `LICENSE` file).
 
 ©2026 Universiti Malaya.
+
 
 
 
