@@ -15,8 +15,6 @@ We tackle label unlearning in Vertical Federated Learning (VFL), where labels ar
 Download the following datasets from the link provided.
 Place the datasets in the .\data directory.
 
-<!--- ModelNet: https://drive.google.com/drive/folders/14WZ7oaobP4STJkhHDWLHo6LDd9U994FX?usp=sharing -->
-
 Brain Tumor MRI: https://drive.google.com/drive/folders/1gFVOAGlUh-sCl-wbDzzrM9G_2UwtMCHB?usp=sharing
 
 Yahoo Answer : https://drive.google.com/drive/folders/1Frwb-ozdsDCSwUbGKuXsj5bCbd3hIp8K?usp=sharing
@@ -38,7 +36,7 @@ You may specify different data with --data=`<data name>`
 
 ### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
 ### Command for unlearning
-Before running the unlearning Python files, ensure you update the model path in the `torch.load()` code to point to your saved directory in the following files: `unlearn.py`, `unlearn_modelnet.py`, `unlearn_2labels.py`, and `unlearn_4labels.py`.
+Before running the unlearning Python files, ensure you update the model path in the `torch.load()` code to point to your saved directory in the following files: `unlearn.py`, `unlearn_2labels.py`, and `unlearn_4labels.py`.
 
 ## Citation
 
@@ -59,6 +57,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 The project is open source under BSD-3 license (see the `LICENSE` file).
 
 ©2026 Universiti Malaya.
+
 
 
 
