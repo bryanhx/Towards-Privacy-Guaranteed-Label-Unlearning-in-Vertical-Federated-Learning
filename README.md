@@ -32,4 +32,16 @@ You may specify different data with --data=`<data name>`
 ### Command for unlearning
 Before running the unlearning Python files, ensure you update the model path in the `torch.load()` code to point to your saved directory in the following files: `unlearn.py`, `unlearn_modelnet.py`, `unlearn_2labels.py`, and `unlearn_4labels.py`.
 
+## Citation
+
+```bibtex
+@InProceedings{Hong_2026_ICLR,
+    author    = {Gu, Hanlin and Tae, Hongxi and and Fan, Lixin and Chan, Chee Seng},
+    title     = {Towards Privacy-Guaranteed Label Unlearning in Vertical Federated Learning: Few-Shot Forgetting Without Disclosure},
+    booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
+    year      = {2026}
+}
+```
+
+
 
