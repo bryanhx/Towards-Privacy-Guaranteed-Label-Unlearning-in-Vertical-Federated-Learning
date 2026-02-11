@@ -1,7 +1,16 @@
-# [ICLR2026] This is an official implementation of the paper [Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning](https://openreview.net/forum?id=G1JdmhkicJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))
+# Federated Label Unlearning
+
+[ICLR 2026] [Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning](https://openreview.net/forum?id=G1JdmhkicJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))
+
+### Official pytorch implementation of the paper: "Towards Privacy-Guaranteed Label Unlearning in Vertical Federated Learning: Few-Shot Forgetting Without Disclosure"
+
+#### ICLR 2026 [(ArXiv)](https://arxiv.org/abs/2410.10922)
+
+#### (Released on February 08, 2026)
+
+## Introduction
 
 ## Getting Start
-
 
 ### Datasets
 Download the following datasets from the link provided.
@@ -42,6 +51,16 @@ Before running the unlearning Python files, ensure you update the model path in 
     year      = {2026}
 }
 ```
+## Feedback
+Suggestions and opinions on this work (both positive and negative) are greatly welcomed. Please contact the author by sending an email to
+`cs.chan at um.edu.my`
+
+# License and Copyright
+
+The project is open source under BSD-3 license (see the `LICENSE` file).
+
+©2026 Universiti Malaya.
+
 
 
 
