@@ -1,4 +1,4 @@
-# This is an official implementation of the paper [Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning](https://openreview.net/forum?id=G1JdmhkicJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))
+# [ICLR2026] This is an official implementation of the paper [Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning](https://openreview.net/forum?id=G1JdmhkicJ&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions))
 
 ## Getting Start
 
@@ -42,6 +42,7 @@ Before running the unlearning Python files, ensure you update the model path in 
     year      = {2026}
 }
 ```
+
 
 
 
