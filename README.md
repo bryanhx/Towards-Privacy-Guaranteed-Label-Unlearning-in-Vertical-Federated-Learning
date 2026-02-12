@@ -11,6 +11,22 @@ We tackle label unlearning in Vertical Federated Learning (VFL), where labels ar
 
 ## Getting Start
 
+Clone this directory with running command below:
+```
+git clone https://github.com/bryanhx/Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning.git
+```
+
+Create a conda environment:
+```
+conda env create -f environment.yml
+conda activate unlearn
+```
+
+Move your directory:
+```
+cd Towards-Privacy-Guaranteed-Label-Unlearning-in-Vertical-Federated-Learning
+```
+
 ### Datasets
 Download the following datasets from the link provided.
 Place the datasets in the .\data directory.
@@ -59,6 +75,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 The project is open source under BSD-3 license (see the `LICENSE` file).
 
 ©2026 Universiti Malaya.
+
 
 
 
