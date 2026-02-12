@@ -51,6 +51,11 @@ python main.py --mode=retrain
 
 You may specify different data with --data=`<data name>`
 
+For ModelNet, please use command below:
+```
+python main_modelnet.py --data=modelnet --num_classes=40
+```
+
 
 ### Before running the command for unlearning, change the saved model path directory in the torch.load() code from the unlearn python file.
 ### Command for unlearning
@@ -75,6 +80,7 @@ Suggestions and opinions on this work (both positive and negative) are greatly w
 The project is open source under BSD-3 license (see the `LICENSE` file).
 
 ©2026 Universiti Malaya.
+
 
 
 
