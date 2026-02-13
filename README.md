@@ -91,13 +91,14 @@ python unlearn_modelnet.py --unlearn_method=LUV_modelnet --unlearn_lr=<unlearn l
 ```
 ## Feedback
 Suggestions and opinions on this work (both positive and negative) are greatly welcomed. Please contact the author by sending an email to
-`cs.chan at um.edu.my`
+`taehongxi55 at gmail.com` or `cs.chan at um.edu.my`
 
 # License and Copyright
 
 The project is open source under BSD-3 license (see the `LICENSE` file).
 
 ©2026 Universiti Malaya.
+
 
 
 
